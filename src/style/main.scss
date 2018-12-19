@@ -67,10 +67,15 @@
 
     &__inputs {       
         display: grid;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 27px);
         grid-template-columns: repeat(4, 1fr);
         justify-items: center;
         align-items: center;
+
+        grid-row-gap: 120px;
+        margin-left: 83px;
+        margin-right: 83px;
+        margin-top: 66px;
     }
 }
 
@@ -78,11 +83,12 @@
         font-family: "Montserrat";
         text-align: center;
         display: grid;
+        grid-column-gap: 8px;
+        height: 47px;
         grid-template-columns: [number-s] 26px [number-e input-s] 1fr [input-e];
     
     &__title {
         grid-column: input-s/input-e;
-        border-top: 1px solid #b3b3b3;
         color: #b3b3b3;
         font-size: 13px;
         font-weight: 300px;
@@ -92,6 +98,16 @@
         grid-column: input-s/input-e;
         text-align: center;
         border: none;
+        font-size: 15px;
+        padding: 4px 0;
+        border-bottom: 1px solid #B3B3B3;
+        margin-top: 1px;
+        transition: all .3s ease;
+        
+        &:focus {
+            outline: none;
+            border-bottom: 1px solid rgb(0, 255, 247);
+        }
     }
 
     &__number {
@@ -102,5 +118,8 @@
         text-align: center;
         padding-top: 1px;
         line-height: 24px;
+        height: 26px;
+        width: 26px;
+        font-size: 20px;
     }
 }
